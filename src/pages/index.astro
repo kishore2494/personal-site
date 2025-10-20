@@ -5,7 +5,6 @@ import Entry from "@components/Entry.astro";
 import { getCollection } from "astro:content";
 import style from "../styles/archive.module.css";
 import landingStyle from "../styles/landing.module.css";
-import { Image } from "astro:assets";
 import coverimage from "../images/avatar5-nobg.png";
 import { readingTime } from "@lib/utils";
 
@@ -54,8 +53,8 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
           AI and Data Science graduate specializing in building AI agents, fine-tuning LLMs, and implementing RAG pipelines. Experienced in developing real-world AI solutions across voice automation, multi-agent systems, and deep learning, with a hands-on, build-first approach (Vibe-Coder). Also passionate about STEM and space research.
         </p>
       </div>
-      <Image
-        src="/images/kishore.png"
+      <img
+        src="/personal-site/images/kishore.png"
         alt="Kishore Kumar A - AI Enthusiast"
         class={landingStyle.cover}
         width={300}
@@ -66,13 +65,13 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
     <!-- Navigation Buttons -->
     <div class={style.content} style={{ textAlign: "center", marginBottom: "2em" }}>
       <div style={{ display: "flex", justifyContent: "center", gap: "1em", flexWrap: "wrap" }}>
-        <a href="/articles/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+        <a href="/personal-site/articles/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
           Blog
         </a>
-        <a href="/works/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+        <a href="/personal-site/works/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
           Projects
         </a>
-        <a href="/contact/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+        <a href="/personal-site/contact/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
           Contact
         </a>
       </div>
@@ -115,7 +114,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
         </p>
         <div style={{ textAlign: "center" }}>
           <a
-            href="/contact/"
+            href="/personal-site/contact/"
             class="btn"
             style={{ fontSize: "larger", marginBottom: "4em" }}
           >
@@ -169,7 +168,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="articles-home-link"
               title="Blog"
-              path="/articles/"
+              path="/personal-site/articles/"
               excerpt="Technical articles about AI, machine learning, and software development."
             />
           </li>
@@ -177,7 +176,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="notes-home-link"
               title="Notes"
-              path="/notes/"
+              path="/personal-site/notes/"
               excerpt="Quick thoughts, tutorials, and insights on AI and technology."
             />
           </li>
@@ -185,7 +184,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="works-home-link"
               title="Projects"
-              path="/works/"
+              path="/personal-site/works/"
               excerpt="Showcase of AI projects, research work, and technical implementations."
             />
           </li>
@@ -193,7 +192,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="contact-home-link"
               title="Contact"
-              path="/contact/"
+              path="/personal-site/contact/"
               excerpt="Ideal ways of sending questions, messages, and love letters to me."
             />
           </li>
@@ -201,7 +200,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="topics-home-link"
               title="All topics"
-              path="/tag/"
+              path="/personal-site/tag/"
               excerpt="Archive of all posts organized by topic."
             />
           </li>
