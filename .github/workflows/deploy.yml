@@ -30,6 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Debug - Check files
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Node version:"
+          node --version
+          echo "NPM version:"
+          npm --version
+      
       - name: Build
         run: npm run build
       
