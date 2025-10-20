@@ -1,0 +1,116 @@
+---
+import styles from '@styles/resources-page.module.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  benefits: string[];
+  resourceMetadata: {
+    fileSize?: string;
+    pageCount?: number;
+    format?: string;
+    category?: string;
+  };
+  image?: string;
+  ctaText?: string;
+}
+
+const { 
+  title, 
+  description, 
+  benefits, 
+  resourceMetadata,
+  image,
+  ctaText = "Get Your Free Copy"
+} = Astro.props;
+
+const { fileSize, pageCount, format = "PDF", category } = resourceMetadata;
+---
+
+<section class={styles['resource-hero']}>
+  <div class={styles['hero-container']}>
+    <div class={styles['hero-content']}>
+      <div class={styles['hero-text']}>
+        <h1 class={styles['hero-title']}>{title}</h1>
+        
+        <div class={styles['hero-description']}>
+          <p>{description}</p>
+        </div>
+
+        <div class={styles['resource-metadata']}>
+          <div class={styles['metadata-grid']}>
+            <div class={styles['metadata-item']}>
+              <svg class={styles['metadata-icon']} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class={styles['metadata-label']}>Format</span>
+              <span class={styles['metadata-value']}>{format}</span>
+            </div>
+            
+            {pageCount && (
+              <div class={styles['metadata-item']}>
+                <svg class={styles['metadata-icon']} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class={styles['metadata-label']}>Pages</span>
+                <span class={styles['metadata-value']}>{pageCount}</span>
+              </div>
+            )}
+            
+            {fileSize && (
+              <div class={styles['metadata-item']}>
+                <svg class={styles['metadata-icon']} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class={styles['metadata-label']}>Size</span>
+                <span class={styles['metadata-value']}>{fileSize}</span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {benefits && benefits.length > 0 && (
+          <div class={styles['benefits-section']}>
+            <h3 class={styles['benefits-title']}>What You'll Get:</h3>
+            <ul class={styles['benefits-list']}>
+              {benefits.map(benefit => (
+                <li class={styles['benefit-item']}>
+                  <svg class={styles['check-icon']} width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div class={styles['hero-cta']}>
+          <a href="#resource-form" class={styles['cta-button']}>
+            <svg class={styles['download-icon']} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            {ctaText}
+          </a>
+        </div>
+      </div>
+
+      {image && (
+        <div class={styles['hero-image']}>
+          <img 
+            src={image} 
+            alt={`Preview of ${title}`}
+            class={styles['resource-preview']}
+            loading="eager"
+          />
+        </div>
+      )}
+    </div>
+  </div>
+</section>

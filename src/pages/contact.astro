@@ -1,0 +1,53 @@
+---
+import Layout from "@layouts/Layout.astro";
+import site from "../config/site";
+import style from "../styles/archive.module.css";
+import Link from "@components/Link.astro";
+import LeadForm from "@components/custom/LeadForm.astro";
+
+---
+
+<Layout 
+  title="Contact Me" 
+  description="Get in touch with Kishore Kumar A for AI project discussions, collaborations, and inquiries about machine learning and data science solutions."
+  pageType="contact"
+  includeLocalBusiness={true}
+  path="/contact/"
+>
+    <main class={style.main}>
+        <div class={style.title}>
+          <h1 class={style.heading}>
+            <span>Contact Me</span>
+          </h1>
+        </div>
+  
+        <div class={style.content}>
+          <p>
+            Ready to discuss AI projects, collaborations, or just want to chat about space and technology? 
+            Feel free to reach out through any of the channels below.
+          </p>
+          
+          <div style={{ textAlign: "center", marginBottom: "2em" }}>
+            <div style={{ display: "flex", justifyContent: "center", gap: "2em", flexWrap: "wrap", marginBottom: "1em" }}>
+              <a href="https://www.linkedin.com/in/kishore-kumar-11184a196/" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "0.5em", textDecoration: "none", color: "var(--text-color)" }}>
+                <span style={{ fontSize: "1.5em" }}>💼</span>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://medium.com/@kishore2494" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "0.5em", textDecoration: "none", color: "var(--text-color)" }}>
+                <span style={{ fontSize: "1.5em" }}>📝</span>
+                <span>Medium</span>
+              </a>
+              <a href="mailto:akishorekumar2494@gmail.com" style={{ display: "flex", alignItems: "center", gap: "0.5em", textDecoration: "none", color: "var(--text-color)" }}>
+                <span style={{ fontSize: "1.5em" }}>📧</span>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+          
+          <p>
+            For detailed project discussions or if you prefer a more formal approach, please use the contact form below.
+          </p>
+           <LeadForm />
+        </div>
+      </main>
+</Layout>

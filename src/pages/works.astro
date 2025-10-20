@@ -1,0 +1,57 @@
+---
+import Layout from "@layouts/Layout.astro";
+import site from "../config/site";
+import style from "../styles/archive.module.css";
+import { getCollection } from "astro:content";
+import Entry from "@components/Entry.astro";
+import { readingTime } from "@lib/utils";
+
+const works = await getCollection("works");
+const data = works
+  .filter((work) => !work.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout
+  title="Projects - AI & Machine Learning Portfolio"
+  description="Explore Kishore Kumar A's AI and machine learning projects including RAG systems, multi-agent AI, LLM fine-tuning, and deep learning implementations."
+  pageType="works"
+  includeLocalBusiness={true}
+  path="/works/"
+>
+  <main class={style.main}>
+    <div class={style.title}>
+      <h1 class={style.heading}>
+        <span>Projects</span>
+      </h1>
+    </div>
+
+    <div class={style.content}>
+      <p style={{ maxWidth: "65ch", marginBottom: "2rem" }}>
+        Following projects showcase my skills and experience through
+        real-world examples of my work. Each project is briefly described with
+        links to code repositories and live demos. It reflects my
+        ability to solve complex problems, work with different technologies,
+        and manage AI projects effectively.
+      </p>
+
+      <h2 class={style.subHeading}>
+        <span>Featured projects</span>
+      </h2>
+      <div class={style.gridList}>
+        {
+          data.map((node) => (
+            <Entry
+              title={node.data.title}
+              date={node.data.date.toString()}
+              path={"/" + node.collection + "/" + node.slug}
+              timeToRead={readingTime(node.body)}
+              excerpt={node.data.excerpt}
+              tags={node.data.tags}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </main>
+</Layout>

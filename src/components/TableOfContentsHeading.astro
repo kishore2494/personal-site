@@ -1,0 +1,23 @@
+---
+import type { Heading } from "./TableOfContents.astro";
+import Link from "./Link.astro";
+
+// https://kld.dev/building-table-of-contents/
+
+const { heading } = Astro.props;
+---
+
+<li>
+  <Link to={"#" + heading.slug} aria-label={heading.text} underline>
+    {heading.text}
+  </Link>
+  {
+    heading.subheadings.length > 0 && (
+      <ul>
+        {heading.subheadings.map((subheading: Heading) => (
+          <Astro.self heading={subheading} />
+        ))}
+      </ul>
+    )
+  }
+</li>

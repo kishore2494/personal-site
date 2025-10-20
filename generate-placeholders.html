@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Project Placeholder Images</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .placeholder { width: 400px; height: 230px; margin: 10px; display: inline-block; text-align: center; line-height: 230px; color: white; font-weight: bold; border-radius: 10px; }
+        .rag { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .debate { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .sql { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .vehicle { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .exoplanet { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .llm { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+    </style>
+</head>
+<body>
+    <h1>Project Placeholder Images</h1>
+    <p>Right-click each image and "Save image as" to save them as JPG files.</p>
+    
+    <div class="placeholder rag">RAG System</div>
+    <div class="placeholder debate">AI Debating System</div>
+    <div class="placeholder sql">Text-to-SQL LLM</div>
+    <div class="placeholder vehicle">Autonomous Vehicle</div>
+    <div class="placeholder exoplanet">Exoplanet Prediction</div>
+    <div class="placeholder llm">Custom LLM</div>
+    
+    <script>
+        // Convert divs to canvas images
+        function createImageFromDiv(div, filename) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 400;
+            canvas.height = 230;
+            
+            // Get computed styles
+            const styles = window.getComputedStyle(div);
+            const background = styles.background;
+            
+            // Draw background
+            ctx.fillStyle = background;
+            ctx.fillRect(0, 0, 400, 230);
+            
+            // Draw text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(div.textContent, 200, 115);
+            
+            // Convert to blob and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.click();
+                URL.revokeObjectURL(url);
+            }, 'image/jpeg');
+        }
+        
+        // Auto-generate images after page load
+        window.onload = function() {
+            setTimeout(() => {
+                const divs = document.querySelectorAll('.placeholder');
+                const names = ['rag-system-demo.jpg', 'debating-system-demo.jpg', 'text-to-sql-demo.jpg', 'autonomous-vehicle-demo.jpg', 'exoplanet-demo.jpg', 'custom-llm-demo.jpg'];
+                
+                divs.forEach((div, index) => {
+                    setTimeout(() => createImageFromDiv(div, names[index]), index * 500);
+                });
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

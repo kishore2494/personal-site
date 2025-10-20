@@ -1,0 +1,91 @@
+---
+// Computers.astro - Converted from TSX to Astro
+---
+
+<div id="computers-canvas" class="w-full h-full"></div>
+
+<script>
+  // Three.js computer model animation
+  import * as THREE from 'three';
+  import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
+  function initComputers() {
+    const container = document.getElementById('computers-canvas');
+    if (!container) return;
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(25, container.clientWidth / container.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    container.appendChild(renderer.domElement);
+
+    // Lighting
+    const hemisphereLight = new THREE.HemisphereLight(0x404040, 0x000000, 0.15);
+    scene.add(hemisphereLight);
+
+    const spotLight = new THREE.SpotLight(0xffffff, 1, 0, 0.12, 1, 1);
+    spotLight.position.set(-20, 50, 10);
+    spotLight.castShadow = true;
+    spotLight.shadow.mapSize.width = 1024;
+    scene.add(spotLight);
+
+    const pointLight = new THREE.PointLight(0xffffff, 1);
+    scene.add(pointLight);
+
+    // Controls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = false;
+    controls.maxPolarAngle = Math.PI / 2;
+    controls.minPolarAngle = Math.PI / 2;
+
+    camera.position.set(20, 3, 5);
+
+    // Load 3D model
+    const loader = new GLTFLoader();
+    let computer;
+
+    loader.load('./desktop_pc/scene.gltf', (gltf) => {
+      computer = gltf.scene;
+      
+      // Scale and position
+      const isMobile = window.innerWidth <= 500;
+      computer.scale.setScalar(isMobile ? 0.7 : 0.75);
+      computer.position.set(0, isMobile ? -3 : -3.25, isMobile ? -2.2 : -1.5);
+      computer.rotation.set(-0.01, -0.2, -0.1);
+      
+      scene.add(computer);
+    });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      
+      if (computer) {
+        const isMobile = window.innerWidth <= 500;
+        computer.scale.setScalar(isMobile ? 0.7 : 0.75);
+        computer.position.set(0, isMobile ? -3 : -3.25, isMobile ? -2.2 : -1.5);
+      }
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initComputers);
+  } else {
+    initComputers();
+  }
+</script>
