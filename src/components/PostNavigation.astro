@@ -6,7 +6,7 @@ const { prevPost, nextPost } = Astro.props;
 
 <nav class={style.pagination}>
   {prevPost?.slug ? (
-    <Link to={prevPost?.slug} rel="prev" className={style.item}>
+    <Link to={`/${prevPost?.collection}/${prevPost?.slug}/`} rel="prev" className={style.item}>
       <span class={style.iconPrev}>←</span>
       <span class={style.itemText}>{prevPost?.data.title}</span>
     </Link>
@@ -15,7 +15,7 @@ const { prevPost, nextPost } = Astro.props;
   )}
   {nextPost?.slug ? (
     <Link
-      to={nextPost?.slug}
+      to={`/${nextPost?.collection}/${nextPost?.slug}/`}
       rel="next"
       className={`${style.item} ${style.itemRight}`}
     >
