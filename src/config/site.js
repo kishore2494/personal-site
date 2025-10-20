@@ -102,19 +102,19 @@ const site = {
   mainMenu: [
     {
       title: 'Blog',
-      path: '/personal-site/articles/',
+      path: '/articles/',
     },
     {
       title: 'Projects',
-      path: '/personal-site/works/',
+      path: '/works/',
     },
     {
       title: 'About',
-      path: '/personal-site/about/',
+      path: '/about/',
     },
     {
       title: 'Contact',
-      path: '/personal-site/contact/',
+      path: '/contact/',
     },
   ],
       footerMenu: [],

@@ -1,5 +1,6 @@
 ---
 import style from "../styles/menu.module.css";
+import Link from "./Link.astro";
 let { mainMenu, defaultTheme } = Astro.props;
 
 interface MenuItem {
@@ -20,9 +21,9 @@ interface MenuItem {
     {
       mainMenu.map((menuItem: MenuItem, index: number) => (
         <li id={index.toString()} class={style.primaryMenuItem} data-path={menuItem.path}>
-          <a href={menuItem.path} itemprop="url">
+          <Link to={menuItem.path} itemprop="url">
             {menuItem.title}
-          </a>
+          </Link>
         </li>
       ))
     }

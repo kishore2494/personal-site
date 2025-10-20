@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Link from "@components/Link.astro";
 import site from "../config/site";
 import Entry from "@components/Entry.astro";
 import { getCollection } from "astro:content";
@@ -65,15 +66,15 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
     <!-- Navigation Buttons -->
     <div class={style.content} style={{ textAlign: "center", marginBottom: "2em" }}>
       <div style={{ display: "flex", justifyContent: "center", gap: "1em", flexWrap: "wrap" }}>
-        <a href="/personal-site/articles/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+        <Link to="/articles/" className="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
           Blog
-        </a>
-        <a href="/personal-site/works/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+        </Link>
+        <Link to="/works/" className="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
           Projects
-        </a>
-        <a href="/personal-site/contact/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+        </Link>
+        <Link to="/contact/" className="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
           Contact
-        </a>
+        </Link>
       </div>
     </div>
     
@@ -113,13 +114,13 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
           Ready to explore the future of AI and space technology?
         </p>
         <div style={{ textAlign: "center" }}>
-          <a
-            href="/personal-site/contact/"
-            class="btn"
+          <Link
+            to="/contact/"
+            className="btn"
             style={{ fontSize: "larger", marginBottom: "4em" }}
           >
             Let's Connect & Collaborate
-          </a>
+          </Link>
         </div>
       </div>
       
@@ -168,7 +169,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="articles-home-link"
               title="Blog"
-              path="/personal-site/articles/"
+              path="/articles/"
               excerpt="Technical articles about AI, machine learning, and software development."
             />
           </li>
@@ -176,7 +177,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="notes-home-link"
               title="Notes"
-              path="/personal-site/notes/"
+              path="/notes/"
               excerpt="Quick thoughts, tutorials, and insights on AI and technology."
             />
           </li>
@@ -184,7 +185,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="works-home-link"
               title="Projects"
-              path="/personal-site/works/"
+              path="/works/"
               excerpt="Showcase of AI projects, research work, and technical implementations."
             />
           </li>
@@ -192,7 +193,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="contact-home-link"
               title="Contact"
-              path="/personal-site/contact/"
+              path="/contact/"
               excerpt="Ideal ways of sending questions, messages, and love letters to me."
             />
           </li>
@@ -200,7 +201,7 @@ const fdata = [...fdata1, ...fdata2, ...fdata3]
             <Entry
               key="topics-home-link"
               title="All topics"
-              path="/personal-site/tag/"
+              path="/tag/"
               excerpt="Archive of all posts organized by topic."
             />
           </li>

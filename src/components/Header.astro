@@ -1,6 +1,7 @@
 ---
 import MeteoricIcon from './icons/meteoric-icon.astro'
 import Menu from './menu.astro'
+import Link from './Link.astro'
 import style from '../styles/header.module.css'
 
 let { siteTitle, mainMenu, defaultTheme } = Astro.props
@@ -32,10 +33,10 @@ let { siteTitle, mainMenu, defaultTheme } = Astro.props
 
       <header class={style.header}>
         <div class={style.name}>
-          <a href="/personal-site/">
+          <Link to="/">
             <MeteoricIcon />
             <span class={style.logoLabel}>{siteTitle}</span>
-          </a>
+          </Link>
         </div>
         <Menu mainMenu={mainMenu} defaultTheme={defaultTheme} />
 
