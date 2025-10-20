@@ -4,7 +4,7 @@ const site = {
   titleAlt: 'Kishore Kumar A', // Title for schema.org JSONLD
   // eslint-disable-next-line prettier/prettier
   description: 'Founder | AI Enthusiast | Passionate About Space, Cosmology, and Deep Tech | Building the Future of AI Solutions and Space Exploration',
-  url: 'https://kishore2494.github.io', // Domain of your site. No trailing slash!
+  url: 'https://kishore2494.github.io/personal-site', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   image: {
     // Used for SEO, relative to /static/ folder
@@ -26,7 +26,7 @@ const site = {
   author: {
     // Author for schema.org JSONLD
     name: 'Kishore Kumar A',
-    url: 'https://kishore2494.github.io',
+    url: 'https://kishore2494.github.io/personal-site',
   },
   themeColor: '#ffffff',
   backgroundColor: '#111111',
