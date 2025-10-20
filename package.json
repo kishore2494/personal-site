@@ -19,12 +19,7 @@
     "dependencies": {
         "@astrojs/cloudflare": "^11.0.1",
         "@fontsource/prompt": "^5.0.14",
-        "@fontsource/zilla-slab": "^5.0.13",
-        "@react-three/fiber": "^8.13.0",
-        "@react-three/drei": "^9.68.6",
-        "three": "^0.152.2",
-        "maath": "^0.5.3",
-        "framer-motion": "^10.12.16"
+        "@fontsource/zilla-slab": "^5.0.13"
     },
     "devDependencies": {
         "@astrojs/check": "^0.7.0",
