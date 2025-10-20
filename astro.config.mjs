@@ -6,7 +6,8 @@ import { remarkModifiedTime } from './src/lib/remark-modified-time.mjs';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://kishore2494.github.io/",
+  site: "https://kishore2494.github.io",
+  base: "/personal-site",
   integrations: [sitemap(), mdx()], 
   markdown: {
     syntaxHighlight: 'prism',
