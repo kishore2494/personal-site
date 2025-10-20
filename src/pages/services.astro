@@ -1,0 +1,176 @@
+---
+import Layout from "@layouts/Layout.astro";
+import site from "../config/site";
+import style from "../styles/archive.module.css";
+import Link from "@components/Link.astro";
+import type { ServiceData } from "@lib/schema-generators";
+
+// Define service data for schema markup
+const serviceData: ServiceData = {
+  name: "Custom Automation, Whitelabel Solutions & AI Integration",
+  description: "Professional automation services, whitelabel open-source solutions, and AI workflow integration for businesses looking to eliminate manual work, reduce vendor lock-in, and add intelligent automation.",
+  serviceType: "Technology Consulting",
+  provider: {
+    name: site.titleAlt,
+    url: site.url
+  },
+  areaServed: ["India", "Global"],
+  hasOfferCatalog: {
+    name: "Service Offerings",
+    itemListElement: [
+      {
+        name: "Custom Automation Solutions",
+        description: "End repetitive manual work with custom automation using n8n, APIs, and AI models",
+        price: "Starting at $4,000",
+        priceCurrency: "USD"
+      },
+      {
+        name: "Whitelabel Open-Source Solutions",
+        description: "Deploy and customize powerful open-source tools branded for your business",
+        price: "Starting at $5,000",
+        priceCurrency: "USD"
+      },
+      {
+        name: "AI Workflow Integration",
+        description: "Integrate AI models into existing workflows for intelligent automation and decision-making",
+        price: "Starting at $6,000",
+        priceCurrency: "USD"
+      }
+    ]
+  }
+};
+
+---
+
+<Layout 
+  title="Services - How I Help You Scale" 
+  description="Professional automation services, whitelabel open-source solutions, and AI workflow integration to eliminate manual work, reduce vendor dependencies, and add intelligent automation to your business."
+  pageType="service"
+  serviceData={serviceData}
+  includeLocalBusiness={true}
+  path="/services/"
+  keywords={["automation services", "whitelabel solutions", "AI integration", "custom automation", "open source alternatives", "workflow automation", "business automation", "AI consulting", "technology consulting"]}
+>
+    <main class={style.main}>
+        <div class={style.title}>
+          <h1 class={style.heading}>
+            <span>How I Help You Scale</span>
+          </h1>
+        </div>
+  
+        <div class={style.content}>
+          <p>
+            My services are designed to be a growth ladder for your business. We start by solving your most immediate challenge—finding more time and reaching more customers. From there, we build powerful, intelligent systems that streamline your operations and give you a foundation for long-term, sustainable growth.
+          </p>
+
+          <article class={`${style.gridList} h-entry`}>
+            <h2 class={style.subHeading}>
+              <Link to="/services/ai-marketing/">
+                <span>AI-Powered Marketing: Your Growth Engine on Autopilot</span>
+              </Link>
+            </h2>
+            <div class={`${style.excerpt} p-summary`}>
+              <p>
+                <strong>Who it's for:</strong>  Businesses and founders who need a consistent, professional social media presence but lack the time or resources to create content every day.
+              </p>
+              <p>
+                <strong>What you deliver:</strong>  I build and manage an automated content engine for your brand. Using secure, private AI tools, I generate and schedule a stream of high-quality, relevant social media posts. This attracts new customers and builds your audience consistently, freeing you to focus on running your business.
+              </p>
+              <div class={style.btnGroup}>
+                <a href="/services/ai-marketing/" class="btn">
+                  Learn More About AI-Powered Marketing
+                </a>
+                <a href="mailto:i@alokprateek.in?subject=Free%20Marketing%20Plan" class="btn">
+                  Get Your Automated Marketing Plan
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class={`${style.gridList} h-entry`}>
+            <h2 class={style.subHeading}>
+              <Link to="/services/custom-automation/">
+                <span>End Repetitive Manual Work with Custom Automation</span>
+              </Link>
+            </h2>
+            <div class={`${style.excerpt} p-summary`}>
+              <p>
+                <strong>Who it's for:</strong>  Businesses feeling the strain of manual data entry, disconnected applications, and internal workflows that can no longer keep up with demand.
+              </p>
+              <p>
+                <strong>What you deliver:</strong>  I design and build robust automation systems that act as the central nervous system for your business. Using powerful tools like n8n, custom APIs, and secure AI, I connect your existing software to eliminate bottlenecks, reduce manual errors, and free up your team for more valuable, creative work. I have experience taking products from concept to platforms serving over 100,000 users and can build solutions that scale.
+              </p>
+              <div class={style.btnGroup}>
+                <a href="/services/custom-automation/" class="btn">
+                  Learn More About Custom Automation
+                </a>
+                <a href="mailto:i@alokprateek.in?subject=Free%20Automation%20Audit" class="btn">
+                  Book a Free Automation Audit
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class={`${style.gridList} h-entry`}>
+            <h2 class={style.subHeading}>
+              <Link to="/services/whitelabel-solutions/">
+                <span>Whitelabel Open-Source: Own Your Software, Own Your Future</span>
+              </Link>
+            </h2>
+            <div class={`${style.excerpt} p-summary`}>
+              <p>
+                <strong>Who it's for:</strong> For agencies and companies who want
+                the functionality of expensive SaaS products without the vendor
+                lock-in, recurring fees, and data privacy concerns.
+              </p>
+              <p>
+                <strong>What you deliver:</strong> I deploy, customize, and manage powerful open-source tools for analytics, project management, scheduling, and more. You get a solution branded for your business, running on secure cloud infrastructure that gives you complete control over your data and a predictable, scalable foundation for your growth. 
+              </p>
+              <div class={style.btnGroup}>
+                <a href="/services/whitelabel-solutions/" class="btn">
+                  Learn More About Whitelabel Solutions
+                </a>
+                <a href="mailto:i@alokprateek.in?subject=Get%20a%20Whitelabel%20Solution%20Quote" class="btn">
+                  Get a Whitelabel Solution Quote
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class={`${style.gridList} h-entry`}>
+            <h2 class={style.subHeading}>
+              <Link to="/services/ai-workflow-integration/">
+                <span>AI Workflow Integration: Add Intelligence to Every Process</span>
+              </Link>
+            </h2>
+            <div class={`${style.excerpt} p-summary`}>
+              <p>
+                <strong>Who it's for:</strong> For businesses looking to add intelligence to their existing workflows with AI-powered document processing, customer service automation, and data analysis capabilities.
+              </p>
+              <p>
+                <strong>What you deliver:</strong> This is where your business starts to think for itself. I integrate secure, private AI models directly into your systems to handle complex decisions, process documents with human-like understanding, and provide intelligent insights from your data. We’ll create workflows that don't just do things—they <i>understand</i> context.
+              </p>
+              <div class={style.btnGroup}>
+                <a href="/services/ai-workflow-integration/" class="btn">
+                  Learn More About AI Integration
+                </a>
+                <a href="mailto:i@alokprateek.in?subject=AI%20Strategy%20Session" class="btn">
+                  Book AI Strategy Session
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class={`${style.gridList} h-entry`}>
+            <h2 class={style.subHeading}>
+              <span>Technologies I Master</span>
+            </h2>
+            <div class={`${style.excerpt} p-summary`}>
+              <p>
+                I have experience with a wide range of technologies and tools. Here are some of the key ones I master.
+              </p>
+            </div>
+          </article>
+        </div>
+      </main>
+</Layout>

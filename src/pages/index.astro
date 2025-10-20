@@ -1,0 +1,238 @@
+---
+import Layout from "@layouts/Layout.astro";
+import site from "../config/site";
+import Entry from "@components/Entry.astro";
+import { getCollection } from "astro:content";
+import style from "../styles/archive.module.css";
+import landingStyle from "../styles/landing.module.css";
+import { Image } from "astro:assets";
+import coverimage from "../images/avatar5-nobg.png";
+import { readingTime } from "@lib/utils";
+
+const data1 = (await getCollection("notes"))
+  .filter((note) => note.data.featured && !note.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const data2 = (await getCollection("articles"))
+  .filter((article) => article.data.featured && !article.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const data3 = (await getCollection("bibliophilediaries"))
+  .filter((entry) => entry.data.featured && !entry.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const data = [...data1, ...data2, ...data3];
+
+const fdata1 = (await getCollection("notes")).filter(
+  (note) => !note.data.draft,
+);
+const fdata2 = (await getCollection("articles")).filter(
+  (article) => !article.data.draft,
+);
+const fdata3 = (await getCollection("bibliophilediaries")).filter(
+  (entry) => !entry.data.draft,
+);
+
+const fdata = [...fdata1, ...fdata2, ...fdata3]
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 6);
+---
+
+<Layout
+  description={site.description}
+  pageType="home"
+  includeLocalBusiness={true}
+  path="/"
+>
+  <main id="main" class={style.main}>
+    <div class={landingStyle.title}>
+      <div>
+        <h1 class={style.heading}>
+          <span>
+            Hii, I'm Kishore, this is my portfolio site.
+          </span>
+        </h1>
+        <p style={{ marginTop: "1em", fontSize: "1.1em", lineHeight: "1.6" }}>
+          AI and Data Science graduate specializing in building AI agents, fine-tuning LLMs, and implementing RAG pipelines. Experienced in developing real-world AI solutions across voice automation, multi-agent systems, and deep learning, with a hands-on, build-first approach (Vibe-Coder). Also passionate about STEM and space research.
+        </p>
+      </div>
+      <Image
+        src="/images/kishore.png"
+        alt="Kishore Kumar A - AI Enthusiast"
+        class={landingStyle.cover}
+        width={300}
+        height={300}
+      />
+    </div>
+    
+    <!-- Navigation Buttons -->
+    <div class={style.content} style={{ textAlign: "center", marginBottom: "2em" }}>
+      <div style={{ display: "flex", justifyContent: "center", gap: "1em", flexWrap: "wrap" }}>
+        <a href="/articles/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+          Blog
+        </a>
+        <a href="/works/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+          Projects
+        </a>
+        <a href="/contact/" class="btn" style={{ fontSize: "1.1em", padding: "0.8em 1.5em" }}>
+          Contact
+        </a>
+      </div>
+    </div>
+    
+    <!-- How can I help you section - styled as proper title -->
+    <div class={style.content}>
+      <h2 class={style.subHeading}>
+        <span>How can I help you?</span>
+      </h2>
+    </div>
+    
+    <div class={style.content}>
+      <div>
+        <p>
+          My work with Aurora AI focuses on delivering AI-driven solutions that help businesses streamline. 
+          However, my true passion lies in the mysteries of the cosmos. I've been deeply fascinated by 
+          space exploration and cosmology, and I envision a future where AI, quantum computing, and other 
+          advanced technologies play a pivotal role in humanity's journey to explore the universe.
+        </p>
+        <p>
+          From following groundbreaking space missions to pursuing knowledge in astrophysics and quantum 
+          mechanics, I'm driven by the desire to contribute to humanity's next giant leap.
+        </p>
+        <p>
+          I believe that through innovation and relentless learning, we can unlock the secrets of the cosmos 
+          and bring those insights back to Earth. Whether it's optimizing Earth-based technologies or designing 
+          AI systems for space exploration, I'm committed to pushing the boundaries of what's possible.
+        </p>
+        <p>
+          <strong>What I can help you with:</strong>
+        </p>
+        <ul style={{ marginLeft: "3ch" }}>
+          <li><strong>AI Solutions:</strong> Building intelligent systems for automation, customer support, and business processes using cutting-edge AI technologies.</li>
+          <li><strong>Space Tech Innovation:</strong> Exploring how AI and deep tech can contribute to space exploration and cosmic research.</li>
+          <li><strong>Deep Tech Integration:</strong> Combining AI, quantum computing, and other advanced technologies for breakthrough solutions.</li>
+        </ul>
+        <p>
+          Ready to explore the future of AI and space technology?
+        </p>
+        <div style={{ textAlign: "center" }}>
+          <a
+            href="/contact/"
+            class="btn"
+            style={{ fontSize: "larger", marginBottom: "4em" }}
+          >
+            Let's Connect & Collaborate
+          </a>
+        </div>
+      </div>
+      
+      <h2 class={style.subHeading}>
+        <span>Recent posts</span>
+      </h2>
+      <div class={style.gridList}>
+        {
+          fdata.map((node) => (
+            <Entry
+              title={node.data.title}
+              date={node.data.date.toString()}
+              path={"/" + node.collection + "/" + node.slug}
+              timeToRead={readingTime(node.body)}
+              excerpt={node.data.excerpt}
+              tags={node.data.tags}
+            />
+          ))
+        }
+      </div>
+
+      <h2 class={style.subHeading}>
+        <span>Featured articles</span>
+      </h2>
+      <div class={style.gridList}>
+        {
+          data.map((node) => (
+            <Entry
+              title={node.data.title}
+              date={node.data.date.toString()}
+              path={"/" + node.collection + "/" + node.slug}
+              timeToRead={readingTime(node.body)}
+              excerpt={node.data.excerpt}
+              tags={node.data.tags}
+            />
+          ))
+        }
+      </div>
+
+      <h2 class={style.subHeading}>
+        <span>Explore more on this site</span>
+      </h2>
+      <div>
+        <ul class={`${style.gridListExpanded} ${style.navList}`}>
+          <li id="articles">
+            <Entry
+              key="articles-home-link"
+              title="Blog"
+              path="/articles/"
+              excerpt="Technical articles about AI, machine learning, and software development."
+            />
+          </li>
+          <li id="notes">
+            <Entry
+              key="notes-home-link"
+              title="Notes"
+              path="/notes/"
+              excerpt="Quick thoughts, tutorials, and insights on AI and technology."
+            />
+          </li>
+          <li id="works">
+            <Entry
+              key="works-home-link"
+              title="Projects"
+              path="/works/"
+              excerpt="Showcase of AI projects, research work, and technical implementations."
+            />
+          </li>
+          <li id="contact">
+            <Entry
+              key="contact-home-link"
+              title="Contact"
+              path="/contact/"
+              excerpt="Ideal ways of sending questions, messages, and love letters to me."
+            />
+          </li>
+          <li id="topics">
+            <Entry
+              key="topics-home-link"
+              title="All topics"
+              path="/tag/"
+              excerpt="Archive of all posts organized by topic."
+            />
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Contact Section -->
+      <h2 class={style.subHeading}>
+        <span>Get in Touch</span>
+      </h2>
+      <div style={{ textAlign: "center", marginBottom: "2em" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: "2em", flexWrap: "wrap", marginBottom: "1em" }}>
+          <a href="https://www.linkedin.com/in/kishore-kumar-11184a196/" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "0.5em", textDecoration: "none", color: "var(--text-color)" }}>
+            <span style={{ fontSize: "1.5em" }}>💼</span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://medium.com/@kishore2494" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: "0.5em", textDecoration: "none", color: "var(--text-color)" }}>
+            <span style={{ fontSize: "1.5em" }}>📝</span>
+            <span>Medium</span>
+          </a>
+          <a href="mailto:akishorekumar2494@gmail.com" style={{ display: "flex", alignItems: "center", gap: "0.5em", textDecoration: "none", color: "var(--text-color)" }}>
+            <span style={{ fontSize: "1.5em" }}>📧</span>
+            <span>Email</span>
+          </a>
+        </div>
+        <p style={{ fontSize: "0.9em", color: "var(--text-color)", opacity: 0.8 }}>
+          Ready to discuss AI projects, collaborations, or just want to chat about space and technology?
+        </p>
+      </div>
+    </div>
+  </main>
+
+
+</Layout>

@@ -1,0 +1,64 @@
+---
+import TwitterIcon from './icons/twitter-icon.astro'
+import LinkedinIcon from './icons/linkedin-icon.astro'
+import GithubIcon from './icons/github-icon.astro'
+import InstagramIcon from './icons/instagram-icon.astro'
+import RSSIcon from './icons/rss-icon.astro'
+import style from '../styles/footer.module.css'
+
+
+const { footerMenu, twitter, github, instagram, linkedin, feed } = Astro.props
+interface MenuItem {
+  path: string;
+  title: string;
+}
+---
+<div class={style.footerbg} >
+<footer id="footer" class={`${style.footer} animate`}>
+  <ul class={style.menu}>
+    {footerMenu.map((menuItem: MenuItem, index: number) => (
+      <li id={index.toString()}>
+        <a href={menuItem.path}>{menuItem.title}</a>
+      </li>
+    ))}
+  </ul>
+  <ul class={style.menuSocial}>
+      <li>
+        <a href={linkedin} rel="nofollow">
+          <LinkedinIcon />
+          <span class={style.iconLabel}>LinkedIn</span>
+        </a>
+      </li>
+      <li>
+        <a href={twitter} rel="nofollow">
+          <TwitterIcon />
+          <span class={style.iconLabel}>Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href={github} rel="nofollow">
+          <GithubIcon />
+          <span class={style.iconLabel}>GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href={instagram} rel="nofollow">
+          <InstagramIcon />
+          <span class={style.iconLabel}>Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href={feed}>
+          <RSSIcon />
+          <span class={style.iconLabel}>RSS feed</span>
+        </a>
+      </li>
+    
+  </ul>
+  
+    <div class={style.copyright}>
+      &copy; 2025 <a href="https://kishore2494.github.io">Kishore Kumar A</a>. All rights reserved.
+    </div>
+  
+</footer>
+</div>

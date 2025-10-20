@@ -1,0 +1,32 @@
+# build output
+dist/
+# generated types
+.astro/
+.wrangler/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+reference-sites/
+node-v18.20.8-darwin-arm64/
+node-v18.20.8-darwin-x64/
+node.tar.gz
+node-v18.20.8-darwin-*
+node.tar.gz
+node_modules/
