@@ -1,4 +1,5 @@
 ---
+import site from "../config/site";
 
 type Props = {
   to: string;
@@ -18,10 +19,23 @@ const {
   rel,
   ...rest
 } = Astro.props;
+
+// For GitHub Pages, we need to prepend the base URL to internal links
+const getHref = (path: string) => {
+  if (external || path.startsWith('http') || path.startsWith('mailto:') || path.startsWith('tel:')) {
+    return path;
+  }
+  // If it's already a full URL or starts with the base, return as is
+  if (path.startsWith('https://') || path.startsWith('/personal-site/')) {
+    return path;
+  }
+  // Otherwise, prepend the base URL
+  return `/personal-site${path}`;
+};
 ---
 
 <a
-  href={to}
+  href={getHref(to)}
   target={external ? "_blank" : "_self"}
   class={className}
   rel={rel}

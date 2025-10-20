@@ -1,5 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Link from "@components/Link.astro";
 import site from "../config/site";
 import style from "../styles/archive.module.css";
 ---
@@ -53,13 +54,13 @@ import style from "../styles/archive.module.css";
       </p>
       
       <div style={{ textAlign: "center" }}>
-        <a
-          href="/contact/"
-          class="btn"
+        <Link
+          to="/contact/"
+          className="btn"
           style={{ fontSize: "larger", marginBottom: "4em" }}
         >
           Let's Connect & Collaborate
-        </a>
+        </Link>
       </div>
     </div>
   </main>
