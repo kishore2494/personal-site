@@ -4,7 +4,7 @@ path: "/articles/bringing-ai-home-local-server/"
 date: 2024-05-20
 last_modified_at: 2024-05-20T12:00:00-05:00
 excerpt: "Have you ever wished you could have complete control over your AI models and data? With the power to run AI processes locally, you can finally achieve that level of autonomy. Learn how to set up and host your AI server locally."
-image: "/images/article images/Bringing AI Home Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy/AI Home Server Setup.webp"
+image: "/personal-site/images/article images/Bringing AI Home Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy/AI Home Server Setup.webp"
 categories: ["AI", "Tutorial", "Privacy"]
 tags: ["AI", "Local AI", "Ollama", "Privacy", "Self-Hosting", "Docker", "Open Web UI"]
 toc: true
@@ -14,7 +14,7 @@ draft: false
 
 # Bringing AI Home: Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy
 
-![AI Home Server Setup](/images/article images/Bringing AI Home Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy/AI Home Server Setup.webp)
+![AI Home Server Setup](/personal-site/images/article images/Bringing AI Home Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy/AI Home Server Setup.webp)
 
 ## Introduction
 
