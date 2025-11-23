@@ -146,7 +146,7 @@ let lastModified = remarkPluginFrontmatter.lastModified
                 Table of contents
             </summary>
             <div class={style.toc}>
-                <TableOfContents headings={headings} />
+                <TableOfContents headings={headings || []} />
             </div>
         </details>
 
