@@ -13,13 +13,21 @@ interface Props {
 
 const { imagePath, altText, className, styles, imgFolder, loading } = Astro.props;
 
-const images = import.meta.glob<{ default: ImageMetadata }>('../images/*.{jpeg,jpg,png,gif}', { eager: true });
-const coverimages = import.meta.glob<{ default: ImageMetadata }>('../images/cover/*.{jpeg,jpg,png,gif}', { eager: true });
+const images = import.meta.glob<{ default: ImageMetadata }>('../images/**/*.{jpeg,jpg,png,gif,webp}', { eager: true });
+const coverimages = import.meta.glob<{ default: ImageMetadata }>('../images/cover/*.{jpeg,jpg,png,gif,webp}', { eager: true });
 
 //if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "@images/*.{jpeg,jpg,png,gif}"`);
 const getImageSrc = (path: string, folder: string | undefined) => {
+    // If path starts with /personal-site or /images, it's a public folder image - use as-is
+    if (path.startsWith('/personal-site/') || path.startsWith('/images/')) {
+        return path;
+    }
+    // Otherwise, try to find in src/images
     const imageModules = folder === 'cover' ? coverimages : images;
-    const matchedPath = Object.keys(imageModules).find(key => key.includes(path));
+    // Extract filename from path for matching
+    const pathParts = path.split('/');
+    const filename = pathParts[pathParts.length - 1];
+    const matchedPath = Object.keys(imageModules).find(key => key.includes(filename) || key.includes(path));
     return matchedPath ? imageModules[matchedPath].default : null;
 };
 
@@ -27,7 +35,10 @@ const imageSrc = getImageSrc(imagePath, imgFolder);
 ---
 {
    imageSrc ? 
-      <Image src={imageSrc} alt={altText} class={className} style={styles} loading={loading}/>
+      (typeof imageSrc === 'string' ? 
+         <img src={imageSrc} alt={altText} class={className} style={styles} loading={loading} />
+         : <Image src={imageSrc} alt={altText} class={className} style={styles} loading={loading}/>
+      )
    :
       <p>Image not found</p>
 }
