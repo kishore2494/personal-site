@@ -14,7 +14,7 @@ draft: false
 
 # Bringing AI Home: Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy
 
-![AI Home Server Setup](/personal-site/images/article images/Bringing AI Home Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy/AI Home Server Setup.webp)
+![AI Home Server Setup](/personal-site/images/article%20images/Bringing%20AI%20Home%20Setting%20Up%20and%20Hosting%20Your%20AI%20Server%20Locally%20for%20Complete%20Control%20and%20Privacy/AI%20Home%20Server%20Setup.webp)
 
 ## Introduction
 
