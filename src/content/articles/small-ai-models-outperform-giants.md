@@ -4,7 +4,6 @@ path: "/articles/small-ai-models-outperform-giants/"
 date: 2025-02-14
 last_modified_at: 2025-02-14T12:00:00-05:00
 excerpt: "By 2025, 50% of professionals will need to reskill - but what if the same applies to AI models? A groundbreaking study reveals that a tiny 1B-parameter model can outperform a 405B-parameter behemoth. Here's how - and why it changes everything."
-image: "/personal-site/images/article images/Small AI Models Outperform Giants The Secret Is Compute-Optimal Test-Time Scaling/Small AI Models Outperform Giants.webp"
 categories: ["AI", "Machine Learning", "Research"]
 tags: ["AI", "Machine Learning", "LLM", "Innovation", "Tech Trends", "Data Science", "Open Source", "Future of Work"]
 toc: true
