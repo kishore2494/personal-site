@@ -16,8 +16,6 @@ draft: false
 
 By 2025, 50% of professionals will need to reskill — but what if the same applies to AI models? A groundbreaking study reveals that a tiny 1B-parameter model can outperform a 405B-parameter behemoth. Here's how — and why it changes everything.
 
-![Small AI Models Outperform Giants](/personal-site/images/article%20images/Small%20AI%20Models%20Outperform%20Giants%20The%20Secret%20Is%20Compute-Optimal%20Test-Time%20Scaling/Small%20AI%20Models%20Outperform%20Giants.webp)
-
 ## The Big Idea: Smaller Models, Smarter Compute
 
 A recent paper titled "Can 1B LLM Surpass 405B LLM? Rethinking Compute-Optimal Test-Time Scaling" challenges the assumption that bigger AI models are always better. The researchers show that smaller models, when paired with optimized test-time computation strategies, can outperform giants like GPT-4o and 405B-parameter LLMs on complex reasoning tasks.
