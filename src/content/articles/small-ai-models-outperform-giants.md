@@ -4,7 +4,7 @@ path: "/articles/small-ai-models-outperform-giants/"
 date: 2025-02-14
 last_modified_at: 2025-02-14T12:00:00-05:00
 excerpt: "By 2025, 50% of professionals will need to reskill — but what if the same applies to AI models? A groundbreaking study reveals that a tiny 1B-parameter model can outperform a 405B-parameter behemoth. Here's how — and why it changes everything."
-image: "/personal-site/images/article images/Small AI Models Outperform Giants The Secret Is Compute-Optimal Test-Time Scaling/Small AI Models Outperform Giants.webp"
+image: "/personal-site/images/article%20images/Small%20AI%20Models%20Outperform%20Giants%20The%20Secret%20Is%20Compute-Optimal%20Test-Time%20Scaling/Small%20AI%20Models%20Outperform%20Giants.webp"
 categories: ["AI", "Machine Learning", "Research"]
 tags: ["AI", "Machine Learning", "LLM", "Innovation", "Tech Trends", "Data Science", "Open Source", "Future of Work"]
 toc: true
@@ -16,7 +16,7 @@ draft: false
 
 By 2025, 50% of professionals will need to reskill — but what if the same applies to AI models? A groundbreaking study reveals that a tiny 1B-parameter model can outperform a 405B-parameter behemoth. Here's how — and why it changes everything.
 
-![Small AI Models Outperform Giants](/personal-site/images/article images/Small AI Models Outperform Giants The Secret Is Compute-Optimal Test-Time Scaling/Small AI Models Outperform Giants.webp)
+![Small AI Models Outperform Giants](/personal-site/images/article%20images/Small%20AI%20Models%20Outperform%20Giants%20The%20Secret%20Is%20Compute-Optimal%20Test-Time%20Scaling/Small%20AI%20Models%20Outperform%20Giants.webp)
 
 ## The Big Idea: Smaller Models, Smarter Compute
 
@@ -30,7 +30,7 @@ This isn't just a marginal improvement. On benchmarks like MATH-500 and AIME24:
 
 The secret? Test-Time Scaling (TTS) — allocating computational resources strategically during inference to maximize performance.
 
-![Small AI Models Comparison](/personal-site/images/article images/Small AI Models Outperform Giants The Secret Is Compute-Optimal Test-Time Scaling/Small AI Models Outperform Giants (1).webp)
+![Small AI Models Comparison](/personal-site/images/article%20images/Small%20AI%20Models%20Outperform%20Giants%20The%20Secret%20Is%20Compute-Optimal%20Test-Time%20Scaling/Small%20AI%20Models%20Outperform%20Giants%20(1).webp)
 
 ## What Is Test-Time Scaling (TTS)?
 
