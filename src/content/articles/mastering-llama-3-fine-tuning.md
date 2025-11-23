@@ -4,7 +4,7 @@ path: "/articles/mastering-llama-3-fine-tuning/"
 date: 2024-05-20
 last_modified_at: 2024-05-20T12:00:00-05:00
 excerpt: "Unlock the full potential of Llama 3 for your specific applications through precise fine-tuning. Learn how to adapt this powerful tool to suit your unique use case."
-image: "/images/article images/Mastering Llama 3  Fine Tuning for Your Specific Use Case   Adapt LLM for Custom AI Applications/Mastering Llama 3.webp"
+image: "/personal-site/images/article images/Mastering Llama 3  Fine Tuning for Your Specific Use Case   Adapt LLM for Custom AI Applications/Mastering Llama 3.webp"
 categories: ["AI", "Machine Learning", "Tutorial"]
 tags: ["Llama 3", "Fine-Tuning", "LLM", "AI", "Machine Learning", "Custom AI"]
 toc: true
@@ -14,7 +14,7 @@ draft: false
 
 # Mastering Llama 3: Fine-Tuning for Your Specific Use Case | Adapt LLM for Custom AI Applications
 
-![Mastering Llama 3](/images/article images/Mastering Llama 3  Fine Tuning for Your Specific Use Case   Adapt LLM for Custom AI Applications/Mastering Llama 3.webp)
+![Mastering Llama 3](/personal-site/images/article images/Mastering Llama 3  Fine Tuning for Your Specific Use Case   Adapt LLM for Custom AI Applications/Mastering Llama 3.webp)
 
 ## Introduction
 
