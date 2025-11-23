@@ -2,8 +2,8 @@
 import TableOfContentsHeading from "./TableOfContentsHeading.astro";
 
 // https://kld.dev/building-table-of-contents/
-const { headings } = Astro.props;
-const toc = buildToc(headings);
+const { headings = [] } = Astro.props;
+const toc = buildToc(headings || []);
 
 export interface Heading {
   depth: number;
@@ -12,6 +12,9 @@ export interface Heading {
 }
 
 function buildToc(headings: Heading[]) {
+  if (!headings || headings.length === 0) {
+    return [];
+  }
   const toc: Heading[] = [];
   const parentHeadings = new Map();
   headings.forEach((h) => {
@@ -20,7 +23,10 @@ function buildToc(headings: Heading[]) {
     if (heading.depth === 2) {
       toc.push(heading);
     } else {
-      parentHeadings.get(heading.depth - 1).subheadings.push(heading);
+      const parent = parentHeadings.get(heading.depth - 1);
+      if (parent) {
+        parent.subheadings.push(heading);
+      }
     }
   });
   return toc;
