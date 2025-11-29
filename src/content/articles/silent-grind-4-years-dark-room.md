@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# The Silent Grind: 4 Years in a Dark Room
-
 Let's be real.
 
 When you push yourself for something for more than four years, when you spend your days and nights, working 18-hour days, constantly urging yourself to achieve something quicker, you expect a change. You push your limits until they break.

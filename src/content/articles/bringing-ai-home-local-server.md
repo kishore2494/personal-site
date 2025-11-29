@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# Bringing AI Home: Setting Up and Hosting Your AI Server Locally for Complete Control and Privacy
-
 ## Introduction
 
 Have you ever wished you could have complete control over your AI models and data? With the power to run AI processes locally, you can finally achieve that level of autonomy. In this blog, we will explore how to set up and host your AI server locally, allowing for customizable models and private processing. Let's dive in and discover the world of local AI hosting.

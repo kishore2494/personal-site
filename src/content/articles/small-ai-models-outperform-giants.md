@@ -12,8 +12,6 @@ featured: true
 draft: false
 ---
 
-# Small AI Models Outperform Giants: The Secret Is Compute-Optimal Test-Time Scaling
-
 By 2025, 50% of professionals will need to reskill — but what if the same applies to AI models? A groundbreaking study reveals that a tiny 1B-parameter model can outperform a 405B-parameter behemoth. Here's how — and why it changes everything.
 
 ## The Big Idea: Smaller Models, Smarter Compute

@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# Building an AI-Powered Hindi Customer Support System Using Retell AI: A Step-by-Step Guide
-
 **YouTube Video**: [Watch the tutorial](https://youtu.be/K3mv3jQYqqQ)
 
 <iframe width="680" height="510" src="https://www.youtube.com/embed/K3mv3jQYqqQ" title="Breaking: AI-Powered Customer Support in Hindi – A Game-Changer for Indian Businesses! 🇮🇳  #ai" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

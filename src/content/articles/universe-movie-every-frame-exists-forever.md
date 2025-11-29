@@ -12,8 +12,6 @@ featured: true
 draft: false
 ---
 
-# The Universe is a Movie Where Every Frame Exists Forever (All Time Is Happening Right Now)
-
 Have you ever thought about what time really is? We feel it moving, from the past, through the present, and into the future. It feels like a river flowing in one direction.
 
 But what if I told you that's just how it *feels*? What if, in reality, **all time exists all the time?** every second of your life, your first cry, your last laugh, and every sandwich in between.
