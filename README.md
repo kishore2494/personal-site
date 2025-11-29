@@ -28,11 +28,11 @@ AI and Data Science graduate specializing in building AI agents, fine-tuning LLM
 
 ## Project Structure
 
-```bash
-.
-├── public
+   ```bash
+   .
+   ├── public
 │   └── images/            # Static images and assets
-├── src
+   ├── src
 │   ├── content/           # Content collections
 │   │   ├── articles/      # Blog posts
 │   │   ├── works/         # Project showcases
