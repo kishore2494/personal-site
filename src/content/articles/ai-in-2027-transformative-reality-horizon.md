@@ -12,7 +12,7 @@ featured: false
 draft: false
 ---
 
-# **AI in 2027: A Transformative Reality on the Horizon** The Last Three Years Before Everything Changes
+The Last Three Years Before Everything Changes
 
 Jul 16, 2025
 

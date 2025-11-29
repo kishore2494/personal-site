@@ -12,8 +12,6 @@ featured: true
 draft: false
 ---
 
-# The 19-Year-Old Billionaire Blueprint
-
 *Or why your two-month head-start in AI might be the biggest unfair advantage of your life*
 
 In the rapidly unfolding saga of technological progress, few chapters are as electrifying or as accessible as the one we're living through right now in artificial intelligence. Not long ago, the idea that a teenager or a self‐taught enthusiast could enter the field on equal footing with seasoned computer scientists seemed fanciful. Today, it's not just possible, it's the new normal.

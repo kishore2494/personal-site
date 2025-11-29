@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# Mastering Llama 3: Fine-Tuning for Your Specific Use Case | Adapt LLM for Custom AI Applications
-
 ## Introduction
 
 Unlock the full potential of Llama 3 for your specific applications through precise fine-tuning. Learn how to adapt this powerful tool to suit your unique use case.

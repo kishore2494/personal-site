@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# Voice AI is Revolutionizing Customer Interactions. Here's How It Works
-
 By 2030, AI agents will handle 80% of all customer interactions, marking a massive shift toward automation in customer service. This isn't just a trend it's the future.
 
 To understand this transformation, let's break down the Voice AI tech stack that powers these agents. Instead of one monolithic AI, Voice AI relies on five key components working seamlessly together:

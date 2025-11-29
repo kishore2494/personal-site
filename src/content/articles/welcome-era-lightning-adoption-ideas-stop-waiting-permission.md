@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# Welcome to the Era of Lightning Adoption, When Ideas Stop Waiting for Permission
-
 ## From century-long test cycles to weekend roll-outs, here's how and why everything suddenly moved at the speed of a tweet.
 
 **I. The Slow Lane of Yesterday**

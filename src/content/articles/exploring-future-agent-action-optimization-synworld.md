@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# Exploring the Future of Agent Action Optimization: A Deep Dive into SynWorld
-
 ![](https://miro.medium.com/v2/resize:fit:632/1*Xz2L3sVZ5ZdMVdSc8EZQ4g.png)
 
 **Figure 1**: Our method with exploration to refine action knowledge in Synthesized Scenario. (from base paper)

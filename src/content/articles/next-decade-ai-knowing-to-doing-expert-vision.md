@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# The Next Decade of AI: From Knowing to Doing, An Expert's Vision
-
 Adam Cheyer, a renowned AI pioneer and co-founder of Siri, offers a compelling perspective on the evolution of Artificial Intelligence, arguing that **the next ten years will not be about AI achieving super intelligence, but rather about its transformation from "knowing" to "doing"**. Drawing on nearly 40 years of experience in the field, Cheyer shares insights from AI's early days to the present, revealing his profound surprise at the unexpected leap brought by generative AI and outlining a future where AI becomes a critical tool for collective human action.
 
 ## The Genesis of AI: Understanding Words and Taking Action
