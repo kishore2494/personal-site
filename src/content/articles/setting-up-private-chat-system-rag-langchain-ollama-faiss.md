@@ -12,8 +12,6 @@ featured: false
 draft: false
 ---
 
-# Setting Up a Private Chat System (RAG) with LangChain, Ollama, and FAISS Vector Store: A Step-by-Step Guide
-
 In this post, I'll walk you through the process of building a sophisticated chat conversation system using Retrieval-Augmented Generation (RAG). This system leverages LangChain to orchestrate components, OLLAMA's LLaMA3.2:1B for language modeling, and FAISS for vector similarity search — all tied together with a modular, Python-based code architecture. Let's dive into the project overview, technical details, and step-by-step implementation.
 
 ## Project Overview

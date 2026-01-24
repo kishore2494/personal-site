@@ -4,7 +4,7 @@ path: "/articles/how-i-got-an-ai-coding-assistant-running-100-local-and-free/"
 date: 2026-01-24
 last_modified_at: 2026-01-24T12:00:00-05:00
 excerpt: "How I Got an AI Coding Assistant Running 100% Local and Free using Claude Code and Ollama."
-image: "/personal-site/images/article images/How I Got an AI Coding Assistant Running 100% Local and Free/terminal-screenshot.png"
+image: "/personal-site/images/article images/how-ai-coding-assistant-local-free/terminal-screenshot.png"
 categories: ["AI", "Coding", "Local LLM"]
 tags: ["Claude Code", "Ollama", "Local AI", "Coding Assistant"]
 toc: true
@@ -65,7 +65,7 @@ export ANTHROPIC_BASE_URL=http://localhost:11434
 
 That’s IT. You’re now running a fully local AI coding assistant that can read your files, edit code, run terminal commands… and it never phones home. Ever.
 
-![Terminal Screenshot](/personal-site/images/article%20images/How%20I%20Got%20an%20AI%20Coding%20Assistant%20Running%20100%25%20Local%20and%20Free/terminal-screenshot.png)
+![Terminal Screenshot](/personal-site/images/article images/how-ai-coding-assistant-local-free/terminal-screenshot.png)
 
 My thought process spiraling right now:
 
