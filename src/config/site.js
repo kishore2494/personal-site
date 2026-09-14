@@ -7,7 +7,7 @@ const site = {
   url: 'https://kishore2494.github.io/personal-site', // Domain of your site. No trailing slash!
   // Sister site: the 3D/interactive portfolio. Shown as a cross-site link in the header & footer.
   portfolioUrl: 'https://kishore2494.github.io/personal-site-2',
-  portfolioLabel: 'Portfolio',
+  portfolioLabel: 'Portfolio 2',
   siteLanguage: 'en', // Language Tag on <html> element
   image: {
     // Used for SEO, relative to /static/ folder
