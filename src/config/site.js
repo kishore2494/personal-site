@@ -5,6 +5,9 @@ const site = {
   // eslint-disable-next-line prettier/prettier
   description: 'Founder | AI Enthusiast | Passionate About Space, Cosmology, and Deep Tech | Building the Future of AI Solutions and Space Exploration',
   url: 'https://kishore2494.github.io/personal-site', // Domain of your site. No trailing slash!
+  // Sister site: the 3D/interactive portfolio. Shown as a cross-site link in the header & footer.
+  portfolioUrl: 'https://kishore2494.github.io/personal-site-2',
+  portfolioLabel: 'Portfolio',
   siteLanguage: 'en', // Language Tag on <html> element
   image: {
     // Used for SEO, relative to /static/ folder
@@ -117,7 +120,12 @@ const site = {
       path: '/contact/',
     },
   ],
-      footerMenu: [],
+      footerMenu: [
+    {
+      title: 'Portfolio (3D) ↗',
+      path: 'https://kishore2494.github.io/personal-site-2',
+    },
+  ],
   
 }
 

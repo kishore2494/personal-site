@@ -52,13 +52,72 @@
 
 .siteControls {
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   flex: 1;
+  gap: 1rem;
   z-index: 100;
 
   button + button {
     margin-left: 1rem;
   }
+}
+
+/* Cross-site link -> the 3D portfolio (sister site) */
+.crossSiteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid color-mix(in srgb, var(--text-color) 25%, transparent);
+  border-radius: 999px;
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    transform 0.2s ease;
+
+  &,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    border-color: var(--link-color);
+    background-color: color-mix(in srgb, var(--link-color) 10%, transparent);
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--link-color);
+  }
+
+  &:hover .crossSiteArrow,
+  &:focus .crossSiteArrow {
+    transform: translate(1px, -1px);
+  }
+}
+
+.crossSiteDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--link-color);
+  flex: none;
+}
+
+.crossSiteArrow {
+  flex: none;
+  transition: transform 0.2s ease;
+}
+
+/* Label stays visible at every width — the point of this link is discovery. */
+.crossSiteLabel {
+  display: inline-block;
 }
 
 .menuToggle,
